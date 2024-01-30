@@ -22,10 +22,11 @@ class UnorderedList:
 
 	def display(self):
 		current = self.head
-		print("The UnorderedList is",end="")
+		print("The UnorderedList is ",end="")
 		while current != None: 
-			print(current.get_data())
+			print(current.get_data()," ",end="")
 			current = current.get_next()
+		print("")
 
 	def search(self,val):
 		found = False
@@ -56,11 +57,19 @@ class UnorderedList:
 
 		while current!= None :
 			previous = current
-			print("Now i am at",current.get_next())
 			current = current.get_next()
+			# print("Now i am at",self.index(current.get_data()))
+			# print("previous data is at",self.index(previous.get_data()))
 
+		# previous.set_next(None)
+		# previous.head = None
+		# previous.set_next(current)
+		# self.delete(previous.get_data())
+		if previous == None :
+			self.head = current.get_next()
+		else: 
+			previous.set_next(None)
 
-		previous.set_next(current)
 
 	def delete(self,val):
 
@@ -81,7 +90,7 @@ class UnorderedList:
 			else: 
 				previous.set_next(current.get_next())
 
- # append,insert,index,pop
+ # append,insert,pop
 
 myList = UnorderedList()
 # print(myList.is_Empty())
@@ -92,10 +101,12 @@ myList.add(10)
 myList.add(5)
 myList.add(1)
 # print(myList.is_Empty())
-print("Size of the list is",myList.listSize())
+# print("The index of the value is",myList.index(31))
+# print("Size of the list is",myList.listSize())
 # print(myList.search(10))
-myList.delete(10)
+# myList.delete(10)
 print("Size of the list is",myList.listSize())
-# myList.pop()
-print("The index of the value is",myList.index(31))
+myList.display()
+myList.pop()
+print("Size of the list is",myList.listSize())
 myList.display()
