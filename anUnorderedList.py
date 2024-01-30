@@ -20,13 +20,82 @@ class UnorderedList:
 			current = current.get_next()
 		return count
 
+	def display(self):
+		current = self.head
+		print("The UnorderedList is",end="")
+		while current != None: 
+			print(current.get_data())
+			current = current.get_next()
+
+	def search(self,val):
+		found = False
+		current = self.head
+		while current != None and not found:
+			if val == current.get_data():
+				found = True
+			else:
+				current = current.get_next()
+	
+		return found
+
+	def index(self,item):
+		indexNum = -1
+		current = self.head
+		while current != None:
+			indexNum = indexNum + 1
+			if item == current.get_data():
+				break
+			else :
+				current = current.get_next()
+
+		return indexNum
+
+	def pop(self):
+		current = self.head
+		previous = None
+
+		while current!= None :
+			previous = current
+			print("Now i am at",current.get_next())
+			current = current.get_next()
+
+
+		previous.set_next(current)
+
+	def delete(self,val):
+
+		current = self.head
+		previous = None
+		found = False
+
+		while current!= None and not found:
+			if val == current.get_data():
+				found = True
+			else:
+				previous = current
+				current = current.get_next()
+
+		if found:
+			if previous == None :
+				self.head = current.get_next()
+			else: 
+				previous.set_next(current.get_next())
+
+ # append,insert,index,pop
+
 myList = UnorderedList()
-print(myList.is_Empty())
+# print(myList.is_Empty())
 myList.add(3)
 myList.add(31)
 myList.add(71)
 myList.add(10)
 myList.add(5)
 myList.add(1)
-print(myList.is_Empty())
+# print(myList.is_Empty())
 print("Size of the list is",myList.listSize())
+# print(myList.search(10))
+myList.delete(10)
+print("Size of the list is",myList.listSize())
+# myList.pop()
+print("The index of the value is",myList.index(31))
+myList.display()
