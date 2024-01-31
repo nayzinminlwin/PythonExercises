@@ -16,7 +16,6 @@ class UnorderedList:
 		print("Added",Val)
 
 	def insert(self,pos,Val):
-
 		temp = Node(Val)
 		current = self.head
 		previous = None
@@ -89,15 +88,17 @@ class UnorderedList:
 		previous = None
 
 		if current!= None :
-			count = self.listSize()
 
-			for x in range(count-1):
+			# count = self.listSize()
+			# for x in range(count-1):
+			while current.get_next()!=None:
+				
 				previous = current
 				current = current.get_next()
 				# print("Now i am at",self.index(current.get_data()))
 				# print("previous data is at",self.index(previous.get_data()))
 	
-		# Head->1->99->66->None
+		# eg.Head->1->99->66->None
 		# print("current head is",current.get_data())
 		# print("previous head is ",previous.get_data())
 		previous.set_next(None)
