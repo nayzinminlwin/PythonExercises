@@ -7,10 +7,12 @@ def shellSort(array):
 			j = i
 			while j>=gap and array[j-gap]>val:
 				array[j] = array[j-gap]
-				j -=gap
+				j -=gap 
+				# j = j - gap
 			array[j] = val
 
 		gap //=2
+		# gap = gap//2ssssss
 	return array
 
 
