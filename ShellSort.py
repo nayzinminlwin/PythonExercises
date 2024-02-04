@@ -12,7 +12,7 @@ def shellSort(array):
 			array[j] = val
 
 		gap //=2
-		# gap = gap//2ssssss
+		# gap = gap//2
 	return array
 
 
