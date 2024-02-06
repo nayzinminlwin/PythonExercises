@@ -37,6 +37,27 @@ class BinaryTree:
 	def get_rightChild(self):
 		return self.right_child
 
+	def inorder(self):
+		if self!=None:
+			if self.get_leftChild()!= None:
+				self.get_leftChild().inorder()
+
+			print(self.get_rootValue())
+
+			if self.get_rightChild()!=None:
+				self.get_rightChild().inorder()
+
+	def preorder(self):
+		if self!=None:
+			
+			print(self.get_rootValue())
+
+			if self.get_leftChild()!=None:
+				self.get_leftChild().preorder()
+
+			if self.get_rightChild()!=None:
+				self.get_rightChild().preorder()
+
 	def postorder(self):
 		if self!=None:
 			if self.get_leftChild()!=None:
@@ -44,4 +65,6 @@ class BinaryTree:
 			if self.get_rightChild()!=None:
 				self.get_rightChild().postorder()
 			print(self.get_rootValue())
+
+root = BinaryTree("A")
 
