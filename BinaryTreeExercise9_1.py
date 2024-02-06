@@ -13,8 +13,10 @@ def BinaryTreeSearch(Tree,Val):
 			found = True
 
 		if found:
-			return found
+			print("Gonna return found!")
+			return True
 		else:
+			print("Not Found yer.Gonna keep searching.")
 			if Tree.get_leftChild()!=None:
 				BinaryTreeSearch(Tree.get_leftChild(),Val)
 			if Tree.get_rightChild()!=None:
@@ -33,4 +35,4 @@ c.insert_left("F")
 c.insert_right("G")
 aTree.postorder()
 
-print(BinaryTreeSearch(aTree,"G"))
+print(BinaryTreeSearch(aTree,"E"))
