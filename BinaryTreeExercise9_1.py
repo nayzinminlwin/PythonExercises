@@ -1,6 +1,4 @@
 from BinaryTree import BinaryTree
-import site
-import sys
 
 def BinaryTreeSearch(Tree,Val):
 
@@ -16,8 +14,6 @@ def BinaryTreeSearch(Tree,Val):
 
 		if found:
 			return found
-			# exit()
-			sys.exit("Found!")
 		else:
 			if Tree.get_leftChild()!=None:
 				BinaryTreeSearch(Tree.get_leftChild(),Val)
