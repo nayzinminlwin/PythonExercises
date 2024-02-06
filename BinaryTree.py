@@ -66,5 +66,25 @@ class BinaryTree:
 				self.get_rightChild().postorder()
 			print(self.get_rootValue())
 
-root = BinaryTree("A")
+# root = BinaryTree("A")
+
+# root.insert_left("B")
+# root.insert_right("C")
+
+# b = root.get_leftChild()
+
+# b.insert_left("D")
+# b.insert_right("E")
+
+# d = b.get_leftChild()
+
+# d.insert_left("F")
+# d.insert_right("G")
+
+# print("------------In Order--------------")
+# root.inorder()
+# print("------------Pre Order--------------")
+# root.preorder()
+# print("------------Post Order--------------")
+# root.postorder()
 
