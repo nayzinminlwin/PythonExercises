@@ -10,7 +10,7 @@ class BinaryTree:
 
 	def insert_left(self,new_node):
 		if self.left_child == None:
-			print("New Node coming to 1st node!")
+			# print("New Node coming to 1st node!")
 			self.left_child = BinaryTree(new_node)
 		else:
 			t = BinaryTree(new_node)
@@ -79,25 +79,27 @@ class BinaryTree:
 					next_level.append(n.get_leftChild())
 				if n.get_rightChild()!=None:
 					next_level.append(n.get_rightChild())
+					
+			# print(level)
 			print(",".join(level))
 			this_level = next_level
 
 
 
-root = BinaryTree("A")
+# root = BinaryTree("A")
 
-root.insert_left("B")
-root.insert_right("C")
+# root.insert_left("B")
+# root.insert_right("C")
 
-b = root.get_leftChild()
+# b = root.get_leftChild()
 
-b.insert_left("D")
-b.insert_right("E")
+# b.insert_left("D")
+# b.insert_right("E")
 
-d = b.get_leftChild()
+# d = b.get_leftChild()
 
-d.insert_left("F")
-d.insert_right("G")
+# d.insert_left("F")
+# d.insert_right("G")
 
 # print("------------In Order--------------")
 # root.inorder()
@@ -106,5 +108,5 @@ d.insert_right("G")
 # print("------------Post Order--------------")
 # root.postorder()
 
-root.bfs()
+# root.bfs()
 
