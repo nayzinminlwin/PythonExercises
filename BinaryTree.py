@@ -66,20 +66,38 @@ class BinaryTree:
 				self.get_rightChild().postorder()
 			print(self.get_rootValue())
 
-# root = BinaryTree("A")
 
-# root.insert_left("B")
-# root.insert_right("C")
+	def bfs(self):
+		this_level= [self]
+		while this_level:
+			next_level = []
+			level = []
+			for n in this_level:
+				level.append(n.get_rootValue())
 
-# b = root.get_leftChild()
+				if n.get_leftChild()!=None:
+					next_level.append(n.get_leftChild())
+				if n.get_rightChild()!=None:
+					next_level.append(n.get_rightChild())
+			print(",".join(level))
+			this_level = next_level
 
-# b.insert_left("D")
-# b.insert_right("E")
 
-# d = b.get_leftChild()
 
-# d.insert_left("F")
-# d.insert_right("G")
+root = BinaryTree("A")
+
+root.insert_left("B")
+root.insert_right("C")
+
+b = root.get_leftChild()
+
+b.insert_left("D")
+b.insert_right("E")
+
+d = b.get_leftChild()
+
+d.insert_left("F")
+d.insert_right("G")
 
 # print("------------In Order--------------")
 # root.inorder()
@@ -87,4 +105,6 @@ class BinaryTree:
 # root.preorder()
 # print("------------Post Order--------------")
 # root.postorder()
+
+root.bfs()
 
