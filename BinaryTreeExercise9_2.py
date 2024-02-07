@@ -1,7 +1,6 @@
 from BinaryTree import BinaryTree
 
 def bfs_Search(Tree,value):
-	# thisLvl = []
 	thisLvl = [Tree]
 	while thisLvl:
 		nextLvl = []
