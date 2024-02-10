@@ -16,4 +16,3 @@ text1 = "Hello <b>World</b>! This is <b>bold</b>."
 
 match1 = bold_regex1.findall(text1)
 print(match1)
-
