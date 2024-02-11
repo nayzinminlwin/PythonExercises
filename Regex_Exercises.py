@@ -15,3 +15,15 @@ else:
 mentionText = "@MgMg How are you?"
 text = re.sub("^@(.*?)\\s(.*)","<a href=\"/username/\\1\">\\1 \\2</a>",mentionText)
 print(text)
+
+
+# Exercise_1.3(code here)
+
+theCoding = """'''js
+var i = 0;
+var k = 9;
+var c = 99;
+var t = 88;
+'''"""
+code = re.sub("'''(.*)(\n)+(.*)(\n)+'''","<code class=\"\\1\">\\2\\3</code>",theCoding)
+print(code)
