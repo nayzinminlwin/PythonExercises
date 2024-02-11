@@ -17,3 +17,11 @@ print(replacement2)
 text3 = "This is _italic_.And this is another _italic_ again."
 replacement3 = re.sub("_(.*?)_","<i>\\1</i>",text3)
 print(replacement3)
+
+
+code = """'''js
+var k = 10;
+'''"""
+replacement4 = re.sub("'''(.*)(\n)+(.*)(\n)+'''",
+	"<pre><code class=\"\\1\">\\2\\3\\4</code></pre>", code)
+print(replacement4)
