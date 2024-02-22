@@ -17,6 +17,6 @@ class myMath:
 		else:
 			return a/b
 
-aCalc = myMath()
-print(aCalc.mathPlus(1,2))
-print(aCalc.mathDivide(1,0))
+# aCalc = myMath()
+# print(aCalc.mathPlus(1,2))
+# print(aCalc.mathDivide(1,0))
