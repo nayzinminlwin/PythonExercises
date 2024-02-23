@@ -2,7 +2,7 @@ class Stack:
 	def __init__(self):
 		self.item = []
 
-	def isEmpty():
+	def isEmpty(self):
 		return self.item == []
 
 	def push(self,newItem):
@@ -51,9 +51,10 @@ def divideBy16(aDeciNum):
 			# resultArr.insert(0,"Hehehe")
 			resultArr.push("Hehehe")
 
+	resultString = ""
 	while not resultArr.isEmpty():
 		resultString = resultString + str(resultArr.pop())
-	return resultArr
+	return resultString
 
 # print("".join(map(str,divideBy16(668))))
-
+print(divideBy16(668))
