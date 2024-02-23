@@ -6,7 +6,6 @@ def divideBy8(BinaryNum):
 	while exponent>1:
 		reminder = int(exponent%8)
 		exponent = exponent/8;
-		# print("Now i is",i)
 		# result[i] = reminder
 		result.insert(0,reminder)
 	return result
