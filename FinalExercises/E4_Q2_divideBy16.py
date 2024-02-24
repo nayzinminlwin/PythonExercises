@@ -19,6 +19,7 @@ class Stack:
 
 
 def divideBy16(aDeciNum):
+	# resultArr = []
 	resultArr = Stack()
 	exponent = aDeciNum
 	reminder = None
