@@ -66,7 +66,7 @@ c = root.get_right_child()
 c.set_left_child("F")
 c.set_right_child("G")
 
-found = root.search("GG")
+found = root.search("G")
 if found:
 	print("Found")
 else:
