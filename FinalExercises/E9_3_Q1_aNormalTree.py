@@ -4,7 +4,7 @@ class Node:
 		self.child = []
 
 	def get_rootValue(self):
-		return str(self.key)
+		return self.key
 
 	def addChild(self,name):
 		newChild = Node(name)
@@ -34,5 +34,5 @@ b.addChild(f)
 b.addChild(g)
 
 for x in not_Bi_Tree.child:
-	print(x.get_rootValue())
+	print(x.get_rootValue().get_rootValue())
 	# print(x)
