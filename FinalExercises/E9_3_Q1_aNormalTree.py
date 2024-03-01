@@ -13,14 +13,17 @@ class Node:
 		return self.child
 
 	def postOrder(self):
-		# print("Welcome to Preorder Method!")
+		print("Welcome to Preorder Method!")
 		if self!=None:
+			print("i see self is not Empty!")
 			if(len(self.child)>0):
+				print("i see at least one child!")
 				# for child in self.getChild():
 				# 	child.get_rootValue().postOrder()
 				for child in reversed(self.getChild()):
+					print("Looping Child to do postOrder function!")
 					child.postOrder()
-
+			print("Gonna print self.key")
 			print(self.key)
 
 	def preOrder(self):
