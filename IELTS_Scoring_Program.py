@@ -92,3 +92,5 @@ except ValueError and TypeError:
 	print("Total IELTS band score can't be calculated!")
 	print("Input must be numbers only!")
 	print("===========================================")
+
+input("Press Enter to exit . . .")
