@@ -64,7 +64,7 @@ def writing_n_speaking_exe(grading):
 			if grading > 9.0 or grading < 0.0:
 				print("Grading must between 0 and 9!")
 			else:
-				return grading
+				return rounding_exe(grading)
 
 		except ValueError:
 			print("Inputs must be numbers only!")
