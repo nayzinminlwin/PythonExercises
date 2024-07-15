@@ -1,6 +1,7 @@
 # This program will prepare an Answer Sheet for IELTS practice and export in .txt format 
 from datetime import datetime
 from pathlib import Path
+import os
 
 try :
 	book = str(input("Which IELTS Book are you practicing : "))
@@ -24,6 +25,16 @@ try :
 	print(file_name)
 	output_file = Path(file_name)
 
+	#directory allocation
+	current_dir = Path(os.path.dirname(os.path.abspath(file_name)))
+	os.chdir(current_dir)
+
+	# file_path =Path(os.path.join(current_dir,output_file))
+	file_path = Path(current_dir)/file_name
+	print("1. Cureent file path is"+ str(file_path))
+
+	
+
 	# lets work with date time 
 	current_time =datetime.now()
 	current_date = str(current_time.day)+"."+str(current_time.month)+"."+str(current_time.year)
@@ -44,7 +55,7 @@ try :
 	# print(text_into_file)
 
 	# gonna parse text into file
-	output_file.write_text(text_into_file)
+	file_path.write_text(text_into_file)
 	print("Answer sheet for your IELTS practice is exported!")
 
 except ValueError:
