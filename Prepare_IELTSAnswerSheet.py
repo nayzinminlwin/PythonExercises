@@ -36,7 +36,7 @@ try :
 	# gonna write 1 to 40
 	one_to_4ty = ""
 	for x in range(1,41):
-		one_to_4ty = one_to_4ty+str(x)+" .\n"
+		one_to_4ty = one_to_4ty+str(x)+". \n"
 		pass
 
 	# final text into the file
