@@ -68,10 +68,10 @@ def preparationFunction():
 
 def prepareAgain():
 	again = str(input("U want to create another ans paper ?(y or n) :"))
-	print("Inserted value is "+ again)
+	# print("Inserted value is "+ again)
 
 	if again in ["y","Y","yes","YES"]:
-		print("I see yes!")
+		# print("I see yes!")
 		preparationFunction()
 	else :
 		# print("I see sth else!")
