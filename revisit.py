@@ -77,6 +77,19 @@ class Solution:
 
         print(oddArr)
 
+    def exceptionHandlingFun(self)->None:
+        try:
+            num = int(input("Insert an divider(number) : "))
+            print(f"1 divided by {num} is {1/num}.")
+        except ZeroDivisionError:
+            print("You cant divide by zero.")
+        except ValueError:
+            print("Enter number only please.")
+        except Exception:
+            print("Something went wrong!!")
+        finally:
+            print("Do some cleanup here. \nThe program end well.")
+
 
 
 
@@ -86,4 +99,5 @@ sol = Solution()
 # sol.loopTesting()
 # sol.DataStructure_Arrays_Ex1()
 # sol.DataStructure_Arrays_Ex2()
-sol.DataStructure_Arrays_Ex3()
+# sol.DataStructure_Arrays_Ex3()
+sol.exceptionHandlingFun()
